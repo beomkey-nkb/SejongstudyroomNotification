@@ -205,6 +205,10 @@ class ViewController: UIViewController {
                     {
                         alertButton.isHidden = false
                     }
+                    else
+                    {
+                        alertButton.isHidden = true
+                    }
                 }
                 else
                 {
