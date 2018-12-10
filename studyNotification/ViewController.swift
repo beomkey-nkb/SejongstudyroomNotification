@@ -106,6 +106,7 @@ class ViewController: UIViewController {
         if txtSeat != "" {
             var arrInformation: Array<ReservedInformation> = Array()
             var number = 0
+            
             let encodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)//euc-kr 인코딩을 위한 코드
             let mainURL = "http://210.107.226.14/seat/UserLog_dli.asp?QUERY=Y&sROOM=0&txtSEAT=\(txtSeat)&start1yy=\(self.year)&start1mm=\(self.month)&start1dd=\(self.day)&end1yy=\(self.year)&end1mm=\(self.month)&end1dd=\(self.day)&chkSEAT=ON&chkDay=ON"
             var expectedNumber:Int = 4 //예약횟수만큼 보기위한 수
@@ -263,20 +264,20 @@ class ViewController: UIViewController {
             let dateFormatter = DateFormatter()
             var EndtimeText = self.EndTimeLabel.text
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            dateFormatter.timeZone = NSTimeZone(name:  "UTC") as TimeZone?
+            dateFormatter.timeZone = NSTimeZone(name:  "KST") as TimeZone? //시간 기준 한국으로 변경
             let EndtimeDate = dateFormatter.date(from:EndtimeText!)
             
             let before30 = EndtimeDate! - 1800
-            
             print(before30)
-            print(Double(before30.timeIntervalSince(Date())))
-            let timeInter = Double(before30.timeIntervalSince(Date()))
+            var components1 = self.calendar.dateComponents([.year, .month, .day, .hour, .minute],from: before30)
+            print(components1)
+            
             let content = UNMutableNotificationContent()
             content.title = "세종대 학술정보원"
             content.body = "좌석 반납 시간 30분 전입니다!"
             content.sound = UNNotificationSound.default
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInter, repeats: false)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components1, repeats: false)
             let request = UNNotificationRequest(identifier: "testIdentfier", content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
