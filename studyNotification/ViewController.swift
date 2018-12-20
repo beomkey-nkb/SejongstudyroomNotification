@@ -11,6 +11,7 @@ import Kanna
 import Alamofire
 import SwiftSoup
 import UserNotifications
+import SwiftyJSON
 
 struct ReservedInformation{
     var room: String
@@ -32,6 +33,7 @@ class ViewController: UIViewController {
     var month:Int = 0
     var day:Int = 0
     
+    @IBOutlet weak var SubmitButton: UIButton!
     @IBOutlet weak var userID: UITextField!
     @IBOutlet weak var ViewDID: ViewCustom!
     @IBOutlet weak var subLabel1: UILabel!
@@ -60,8 +62,20 @@ class ViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         
         self.view.endEditing(true)
-        
+        //키보드를 사라지게 해줌
     }
+    
+    func toolbarSetupViews(){
+        //키보드에 버튼을 추가하기 위한 함수
+        let toolBar  = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let toolBarButton = UIBarButtonItem(title: "검색", style: UIBarButtonItem.Style.plain, target: self, action: #selector(postButton(_:)))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([flexibleSpace,toolBarButton,flexibleSpace], animated: false)
+        userID.inputAccessoryView = toolBar
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +89,7 @@ class ViewController: UIViewController {
         print(self.month)
         print(self.day)
         
+        SubmitButton.isHidden = true
         //검색버튼 누르기 전에 숨기기
         ViewDID.isHidden = true
         subLabel1.isHidden = true
@@ -95,12 +110,11 @@ class ViewController: UIViewController {
         stateLabel.isHidden = true
         alertButton.isHidden = true
         
-        
-        
+        toolbarSetupViews()
         // Do any additional setup after loading the view, typically from a nib
     }
     
-    @IBAction func post(_ sender: Any) {
+    @IBAction func postButton(_ sender: Any) {
         let txtSeat = userID.text!
         
         if txtSeat != "" {
@@ -251,6 +265,8 @@ class ViewController: UIViewController {
             
             self.present(alertController,animated: true,completion: nil)
         }
+        
+        self.view.endEditing(true)
     }
     
     

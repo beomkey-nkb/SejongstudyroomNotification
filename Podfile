@@ -7,6 +7,7 @@ target 'studyNotification' do
   pod 'Kanna', '~> 4.0.0'
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftSoup'
+  pod 'SwiftyJSON', '~> 4.0'
   # Pods for studyNotification
 
 end
