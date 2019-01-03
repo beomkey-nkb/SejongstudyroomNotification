@@ -340,7 +340,7 @@ class ViewController: UIViewController {
             dateFormatter.timeZone = NSTimeZone(name:  "KST") as TimeZone? //시간 기준 한국으로 변경
             let EndtimeDate = dateFormatter.date(from:EndtimeText!)
 
-            let before30 = EndtimeDate! - 10020
+            let before30 = EndtimeDate! - 1800
             print(before30)
             var components1 = self.calendar.dateComponents([.year, .month, .day, .hour, .minute],from: before30)
             print(components1)

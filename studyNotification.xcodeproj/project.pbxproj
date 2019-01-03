@@ -17,6 +17,7 @@
 		C166E0D521DB88CA0083EB32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */; };
 		C166E0D721DB9C6D0083EB32 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166E0D621DB9C6D0083EB32 /* login.swift */; };
 		C1A308EC21DDF0A2008D37F1 /* settingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A308EB21DDF0A2008D37F1 /* settingController.swift */; };
+		C1A308F221DE5420008D37F1 /* iPhone XR.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A308F121DE5420008D37F1 /* iPhone XR.png */; };
 		C1C9BD2E21BA95910076D2E4 /* ViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BD2D21BA95910076D2E4 /* ViewCustom.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C166E0D621DB9C6D0083EB32 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
 		C1A308EB21DDF0A2008D37F1 /* settingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingController.swift; sourceTree = "<group>"; };
+		C1A308F121DE5420008D37F1 /* iPhone XR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone XR.png"; sourceTree = "<group>"; };
 		C1C9BD2D21BA95910076D2E4 /* ViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				C1449BE621B8CA6C0044A894 /* Assets.xcassets */,
 				C1449BE821B8CA6C0044A894 /* LaunchScreen.storyboard */,
 				C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */,
+				C1A308F121DE5420008D37F1 /* iPhone XR.png */,
 				C1C9BD2D21BA95910076D2E4 /* ViewCustom.swift */,
 				C1449BEB21B8CA6C0044A894 /* Info.plist */,
 			);
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1449BEA21B8CA6C0044A894 /* LaunchScreen.storyboard in Resources */,
+				C1A308F221DE5420008D37F1 /* iPhone XR.png in Resources */,
 				C1449BE721B8CA6C0044A894 /* Assets.xcassets in Resources */,
 				C1449BE521B8CA690044A894 /* Main.storyboard in Resources */,
 				C166E0D521DB88CA0083EB32 /* GoogleService-Info.plist in Resources */,
