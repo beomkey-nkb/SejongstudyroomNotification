@@ -13,14 +13,14 @@ class ViewCustom:UIView{
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
         
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 5
     }
 }
 class ButtonCustom:UIButton{
     required init(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)!
         
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 5
     }
 }
 

@@ -8,6 +8,13 @@ target 'studyNotification' do
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftSoup'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
+  pod 'Material', '~> 2.0'
+  pod 'TextFieldEffects'
   # Pods for studyNotification
 
 end

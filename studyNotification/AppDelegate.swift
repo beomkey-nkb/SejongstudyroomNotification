@@ -8,9 +8,14 @@
 
 import UIKit
 import UserNotifications
+import Firebase
+import GoogleSignIn
+import FBSDKLoginKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
+    
 
     var window: UIWindow?
 
@@ -28,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
         
         UNUserNotificationCenter.current().delegate = self
         
