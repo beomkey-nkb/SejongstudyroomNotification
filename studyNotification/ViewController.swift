@@ -67,6 +67,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var subView4: ViewCustom!
     @IBOutlet weak var emptyLabel: UILabel!
     
+
+    @IBOutlet weak var bell: UILabel!
+    @IBOutlet weak var belltime: UILabel!
+    @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet weak var reserveView: ViewCustom!
+    
     
     
     override var preferredStatusBarStyle:UIStatusBarStyle {
@@ -144,6 +150,11 @@ class ViewController: UIViewController {
         subView3.isHidden = true
         subView4.isHidden = true
         emptyLabel.isHidden = true
+        
+        bell.isHidden = true
+        belltime.isHidden = true
+        removeButton.isHidden = true
+        reserveView.isHidden = true
         
         postButton((Any).self)
     }
@@ -276,7 +287,7 @@ class ViewController: UIViewController {
                             }
                             else
                             {
-                                self.alertButton.isHidden = true
+                                self.alertButton.isHidden = false
                             }
                         }
                         else
@@ -329,42 +340,58 @@ class ViewController: UIViewController {
 
 
     @IBAction func alertAction(_ sender: Any) {
+        
+        let alertController = UIAlertController(title: "반납시간 30분 전 알림",message: "예약이 완료되었습니다.", preferredStyle: UIAlertController.Style.alert)
+        
+        //UIAlertActionStye.destructive 지정 글꼴 색상 변경
+        let cancelButton = UIAlertAction(title: "완료", style: UIAlertAction.Style.cancel, handler: nil)
+        
+        alertController.addAction(cancelButton)
+        
+        self.present(alertController,animated: true,completion: nil)
 
         let alert: UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle:  UIAlertController.Style.actionSheet)
 
-        let informantAction: UIAlertAction = UIAlertAction(title: "반납 30분 전 알림", style: UIAlertAction.Style.destructive, handler:{
-            (action: UIAlertAction!) -> Void in
-            let dateFormatter = DateFormatter()
-            var EndtimeText = self.EndTimeLabel.text
-            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-            dateFormatter.timeZone = NSTimeZone(name:  "KST") as TimeZone? //시간 기준 한국으로 변경
-            let EndtimeDate = dateFormatter.date(from:EndtimeText!)
+        let dateFormatter = DateFormatter()
+        var EndtimeText = self.EndTimeLabel.text
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = NSTimeZone(name:  "KST") as TimeZone? //시간 기준 한국으로 변경
+        let EndtimeDate = dateFormatter.date(from:EndtimeText!)
+        
+        let before30 = EndtimeDate! - 1800
+        belltime.text = dateFormatter.string(from: before30)
+        var components1 = self.calendar.dateComponents([.year, .month, .day, .hour, .minute],from: before30)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "세종대 학술정보원"
+        content.body = "좌석 반납 시간 30분 전입니다!"
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components1, repeats: false)
+        let request = UNNotificationRequest(identifier: "testIdentfier", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+//        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        //알림 삭제 메소드
 
-            let before30 = EndtimeDate! - 1800
-            print(before30)
-            var components1 = self.calendar.dateComponents([.year, .month, .day, .hour, .minute],from: before30)
-            print(components1)
+        bell.isHidden = false
+        belltime.isHidden = false
+        removeButton.isHidden = false
+        reserveView.isHidden = false
 
-            let content = UNMutableNotificationContent()
-            content.title = "세종대 학술정보원"
-            content.body = "좌석 반납 시간 30분 전입니다!"
-            content.sound = UNNotificationSound.default
-
-            let trigger = UNCalendarNotificationTrigger(dateMatching: components1, repeats: false)
-            let request = UNNotificationRequest(identifier: "testIdentfier", content: content, trigger: trigger)
-
-            UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
-        })
-
-        let cancelAction: UIAlertAction = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler:{
-            (action: UIAlertAction!) -> Void in
-            print("취소처리")
-        })
-
-        alert.addAction(cancelAction)
-        alert.addAction(informantAction)
-
-        self.present(alert, animated: true, completion: nil)
     }
-
+    
+    
+    @IBAction func removeNotification(_ sender: Any) {
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        //알림 삭제 메소드
+        belltime.text = "예약정보 없음"
+        
+        bell.isHidden = true
+        belltime.isHidden = true
+        removeButton.isHidden = true
+        reserveView.isHidden = true
+        
+    }
+    
 }
