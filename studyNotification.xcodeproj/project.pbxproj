@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		213AEE3EB4046C6567CB5F1C /* Pods_studyNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF1FB92FA048FC7CDC9C41D /* Pods_studyNotification.framework */; };
+		C13C6F2B21E78F9A00044290 /* infoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C6F2A21E78F9A00044290 /* infoController.swift */; };
+		C13C6F3221E7AB4100044290 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13C6F3021E7AB4100044290 /* TableViewCell.swift */; };
+		C13C6F3321E7AB4100044290 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C13C6F3121E7AB4100044290 /* TableViewCell.xib */; };
 		C1449BE021B8CA690044A894 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449BDF21B8CA690044A894 /* AppDelegate.swift */; };
 		C1449BE221B8CA690044A894 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1449BE121B8CA690044A894 /* ViewController.swift */; };
 		C1449BE521B8CA690044A894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1449BE321B8CA690044A894 /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		0974ABCB39F9ECF1E9A99839 /* Pods-studyNotification.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyNotification.release.xcconfig"; path = "Pods/Target Support Files/Pods-studyNotification/Pods-studyNotification.release.xcconfig"; sourceTree = "<group>"; };
 		6DF1FB92FA048FC7CDC9C41D /* Pods_studyNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_studyNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78DFD1634BB6F03E8B111233 /* Pods-studyNotification.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-studyNotification.debug.xcconfig"; path = "Pods/Target Support Files/Pods-studyNotification/Pods-studyNotification.debug.xcconfig"; sourceTree = "<group>"; };
+		C13C6F2A21E78F9A00044290 /* infoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoController.swift; sourceTree = "<group>"; };
+		C13C6F3021E7AB4100044290 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C13C6F3121E7AB4100044290 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		C1449BDC21B8CA690044A894 /* studyNotification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = studyNotification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1449BDF21B8CA690044A894 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1449BE121B8CA690044A894 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,9 +99,12 @@
 				C1449BDF21B8CA690044A894 /* AppDelegate.swift */,
 				C1449BE121B8CA690044A894 /* ViewController.swift */,
 				C1449BE321B8CA690044A894 /* Main.storyboard */,
+				C13C6F2A21E78F9A00044290 /* infoController.swift */,
 				C1A308EB21DDF0A2008D37F1 /* settingController.swift */,
 				C15B93C321DCF3A2008D12DC /* createUser.swift */,
 				C166E0D621DB9C6D0083EB32 /* login.swift */,
+				C13C6F3021E7AB4100044290 /* TableViewCell.swift */,
+				C13C6F3121E7AB4100044290 /* TableViewCell.xib */,
 				C1449BE621B8CA6C0044A894 /* Assets.xcassets */,
 				C1449BE821B8CA6C0044A894 /* LaunchScreen.storyboard */,
 				C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */,
@@ -168,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1449BEA21B8CA6C0044A894 /* LaunchScreen.storyboard in Resources */,
+				C13C6F3321E7AB4100044290 /* TableViewCell.xib in Resources */,
 				C1A308F221DE5420008D37F1 /* iPhone XR.png in Resources */,
 				C1449BE721B8CA6C0044A894 /* Assets.xcassets in Resources */,
 				C1449BE521B8CA690044A894 /* Main.storyboard in Resources */,
@@ -280,10 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1449BE221B8CA690044A894 /* ViewController.swift in Sources */,
+				C13C6F3221E7AB4100044290 /* TableViewCell.swift in Sources */,
 				C1449BE021B8CA690044A894 /* AppDelegate.swift in Sources */,
 				C1A308EC21DDF0A2008D37F1 /* settingController.swift in Sources */,
 				C1C9BD2E21BA95910076D2E4 /* ViewCustom.swift in Sources */,
 				C15B93C421DCF3A2008D12DC /* createUser.swift in Sources */,
+				C13C6F2B21E78F9A00044290 /* infoController.swift in Sources */,
 				C166E0D721DB9C6D0083EB32 /* login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

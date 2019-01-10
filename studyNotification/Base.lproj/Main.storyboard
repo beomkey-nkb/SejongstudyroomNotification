@@ -191,6 +191,44 @@
             </objects>
             <point key="canvasLocation" x="-2151.1999999999998" y="900.89955022488766"/>
         </scene>
+        <!--info-->
+        <scene sceneID="svz-Bx-EIi">
+            <objects>
+                <tableViewController id="Dxs-Yv-y9r" customClass="infoController" customModule="studyNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8ob-xF-Wmf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1686214758" green="0.16780687929999999" blue="0.16943607229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.1686214758" green="0.16780687929999999" blue="0.16943607229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="UfD-ie-5nB">
+                            <rect key="frame" x="0.0" y="117" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.1686214758" green="0.16780687929999999" blue="0.16943607229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ListCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="89" id="ImE-c7-vf2">
+                                <rect key="frame" x="0.0" y="28" width="375" height="89"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ImE-c7-vf2" id="ipg-z4-NW9">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="88.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.1686214758" green="0.16780687929999999" blue="0.16943607229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Dxs-Yv-y9r" id="Ghx-PG-dC0"/>
+                            <outlet property="delegate" destination="Dxs-Yv-y9r" id="3nt-Oa-dRM"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="info" image="baseline_local_library_black_24pt" selectedImage="baseline_local_library_black_24pt" id="Fi5-FW-ubv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD7-rw-F5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-335.19999999999999" y="-584.25787106446785"/>
+        </scene>
         <!--Seat-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -562,7 +600,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="EJK-bD-Ctb"/>
-                        <segue destination="GQJ-y7-eiq" kind="relationship" relationship="viewControllers" id="uFm-Nj-d21"/>
+                        <segue destination="Dxs-Yv-y9r" kind="relationship" relationship="viewControllers" id="RV8-56-fa4"/>
+                        <segue destination="GQJ-y7-eiq" kind="relationship" relationship="viewControllers" id="9Eg-Hv-qiL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0M2-f9-5hf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -574,6 +613,7 @@
         <image name="SEJONG BELL" width="390" height="39"/>
         <image name="baseline_cancel_white_48pt" width="48" height="48"/>
         <image name="baseline_event_seat_black_24pt" width="24" height="24"/>
+        <image name="baseline_local_library_black_24pt" width="24" height="24"/>
         <image name="baseline_notification_important_black_36pt_3x" width="80" height="96"/>
         <image name="baseline_settings_black_24pt" width="24" height="24"/>
     </resources>
