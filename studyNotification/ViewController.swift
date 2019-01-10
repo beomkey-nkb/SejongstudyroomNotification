@@ -287,7 +287,7 @@ class ViewController: UIViewController {
                             }
                             else
                             {
-                                self.alertButton.isHidden = false
+                                self.alertButton.isHidden = true
                             }
                         }
                         else
