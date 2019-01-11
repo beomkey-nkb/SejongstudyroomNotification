@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import MBCircularProgressBar
 
 //커스텀셀을 위해 만든 클래스
 class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var Room: UILabel!
-    @IBOutlet weak var useNumber: UILabel!
+    @IBOutlet weak var allSeatLabel: UILabel!
+    @IBOutlet weak var allSeat: UILabel!
+    @IBOutlet weak var extraSeatLabel: UILabel!
+    @IBOutlet weak var extraSeat: UILabel!
+    @IBOutlet weak var pie: MBCircularProgressBarView!
+    
+    
     
     
     override func awakeFromNib() {

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE47F11E708D633621DB136BD3CD0034"
-               BlueprintName = "leveldb-library"
+               BlueprintIdentifier = "EDF01DFEBC4074645C585421EDCDC2D5"
+               BlueprintName = "MBCircularProgressBar"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "leveldb-library.framework">
+               BuildableName = "MBCircularProgressBar.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

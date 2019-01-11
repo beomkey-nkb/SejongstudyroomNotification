@@ -89,6 +89,7 @@ PODS:
     - Material/Core (= 2.16.4)
   - Material/Core (2.16.4):
     - Motion (~> 1.4.3)
+  - MBCircularProgressBar (0.3.5)
   - Motion (1.4.3):
     - Motion/Core (= 1.4.3)
   - Motion/Core (1.4.3)
@@ -110,6 +111,7 @@ DEPENDENCIES:
   - GoogleSignIn
   - Kanna (~> 4.0.0)
   - Material (~> 2.0)
+  - MBCircularProgressBar
   - SwiftSoup
   - SwiftyJSON (~> 4.0)
   - TextFieldEffects
@@ -135,6 +137,7 @@ SPEC REPOS:
     - Kanna
     - leveldb-library
     - Material
+    - MBCircularProgressBar
     - Motion
     - nanopb
     - SwiftSoup
@@ -161,12 +164,13 @@ SPEC CHECKSUMS:
   Kanna: c60b61d72554bf04ed1ee074f9b379855cab4892
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
+  MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Motion: 153ba49692997888556c7a95207278a8b1f8be95
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
 
-PODFILE CHECKSUM: 96860005dd0021b4205ac8a1d213a6cdecc46e99
+PODFILE CHECKSUM: 0aa28162da9702c2db6cdc19694b7856ae237a91
 
 COCOAPODS: 1.5.3

@@ -15,6 +15,7 @@ target 'studyNotification' do
   pod 'FBSDKLoginKit'
   pod 'Material', '~> 2.0'
   pod 'TextFieldEffects'
+  pod "MBCircularProgressBar"
   # Pods for studyNotification
 
 end
