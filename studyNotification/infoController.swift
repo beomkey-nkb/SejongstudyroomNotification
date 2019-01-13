@@ -28,12 +28,25 @@ class infoController: UITableViewController {
     override var preferredStatusBarStyle:UIStatusBarStyle {
         return UIStatusBarStyle.lightContent //상태표시줄 색상 흰색
     }
+    
+    var webViewtext = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        tableView.reloadData()
         //33~58 html 파싱
+        htmlpass()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // [START auth_listener]
+        htmlpass()
+        // [END auth_listener]
+    }
+    
+    func htmlpass() {
         InfoUsed.removeAll()
         let InfoencodingEUCKR = CFStringConvertEncodingToNSStringEncoding(0x0422)//euc-kr 인코딩을 위한 코드
         let InfomainURL = "http://210.107.226.14/seat/domian5.asp"
@@ -52,10 +65,9 @@ class infoController: UITableViewController {
                 let Infolink: Element = try Infoconfirm.select("body > center > form > table:nth-child(3) > tbody > tr:nth-child(\(index)) > td:nth-child(4) > font").first()!
                 
                 let exam = try Infolink.text()
-            
+                
                 InfoUsed.append(exam)
             }
-            print(InfoUsed)
         } catch let error {
             print("error = \(error)")
         }
@@ -97,6 +109,18 @@ class infoController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //cell 개수
         return 7
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.webViewtext = "http://210.107.226.14/seat/roomview5.asp?room_no=\(indexPath.row+1)"
+        
+        performSegue(withIdentifier: "GoWeb", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let rvc = segue.destination as? WebViewController {
+            rvc.webURL = self.webViewtext
+        }
     }
 
 }

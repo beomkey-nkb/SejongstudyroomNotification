@@ -36,6 +36,7 @@ class login: UIViewController,GIDSignInUIDelegate{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // [START auth_listener]
+        
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             // [START_EXCLUDE]
             print(user)
@@ -54,6 +55,7 @@ class login: UIViewController,GIDSignInUIDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
                 // User is signed in.

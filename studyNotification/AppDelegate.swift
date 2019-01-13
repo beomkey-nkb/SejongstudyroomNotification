@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        Thread.sleep(forTimeInterval: 2.0)
         FirebaseApp.configure()
         
         UNUserNotificationCenter.current().delegate = self

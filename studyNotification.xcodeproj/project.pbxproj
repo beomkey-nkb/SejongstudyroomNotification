@@ -16,9 +16,11 @@
 		C1449BE521B8CA690044A894 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1449BE321B8CA690044A894 /* Main.storyboard */; };
 		C1449BE721B8CA6C0044A894 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1449BE621B8CA6C0044A894 /* Assets.xcassets */; };
 		C1449BEA21B8CA6C0044A894 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1449BE821B8CA6C0044A894 /* LaunchScreen.storyboard */; };
+		C14CC41A21EB214300FEB0DD /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CC41921EB214300FEB0DD /* WebViewController.swift */; };
 		C15B93C421DCF3A2008D12DC /* createUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15B93C321DCF3A2008D12DC /* createUser.swift */; };
 		C166E0D521DB88CA0083EB32 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */; };
 		C166E0D721DB9C6D0083EB32 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C166E0D621DB9C6D0083EB32 /* login.swift */; };
+		C16CE4C721EB482D00A070E5 /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16CE4C621EB482D00A070E5 /* iTunesArtwork@1x.png */; };
 		C1A308EC21DDF0A2008D37F1 /* settingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A308EB21DDF0A2008D37F1 /* settingController.swift */; };
 		C1A308F221DE5420008D37F1 /* iPhone XR.png in Resources */ = {isa = PBXBuildFile; fileRef = C1A308F121DE5420008D37F1 /* iPhone XR.png */; };
 		C1C9BD2E21BA95910076D2E4 /* ViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1C9BD2D21BA95910076D2E4 /* ViewCustom.swift */; };
@@ -38,9 +40,11 @@
 		C1449BE621B8CA6C0044A894 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1449BE921B8CA6C0044A894 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1449BEB21B8CA6C0044A894 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C14CC41921EB214300FEB0DD /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		C15B93C321DCF3A2008D12DC /* createUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createUser.swift; sourceTree = "<group>"; };
 		C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C166E0D621DB9C6D0083EB32 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
+		C16CE4C621EB482D00A070E5 /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
 		C1A308EB21DDF0A2008D37F1 /* settingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingController.swift; sourceTree = "<group>"; };
 		C1A308F121DE5420008D37F1 /* iPhone XR.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iPhone XR.png"; sourceTree = "<group>"; };
 		C1C9BD2D21BA95910076D2E4 /* ViewCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCustom.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				C1449BDF21B8CA690044A894 /* AppDelegate.swift */,
 				C1449BE121B8CA690044A894 /* ViewController.swift */,
 				C1449BE321B8CA690044A894 /* Main.storyboard */,
+				C14CC41921EB214300FEB0DD /* WebViewController.swift */,
 				C13C6F2A21E78F9A00044290 /* infoController.swift */,
 				C1A308EB21DDF0A2008D37F1 /* settingController.swift */,
 				C15B93C321DCF3A2008D12DC /* createUser.swift */,
@@ -106,6 +111,7 @@
 				C13C6F3021E7AB4100044290 /* TableViewCell.swift */,
 				C13C6F3121E7AB4100044290 /* TableViewCell.xib */,
 				C1449BE621B8CA6C0044A894 /* Assets.xcassets */,
+				C16CE4C621EB482D00A070E5 /* iTunesArtwork@1x.png */,
 				C1449BE821B8CA6C0044A894 /* LaunchScreen.storyboard */,
 				C166E0D421DB88CA0083EB32 /* GoogleService-Info.plist */,
 				C1A308F121DE5420008D37F1 /* iPhone XR.png */,
@@ -179,6 +185,7 @@
 				C1449BEA21B8CA6C0044A894 /* LaunchScreen.storyboard in Resources */,
 				C13C6F3321E7AB4100044290 /* TableViewCell.xib in Resources */,
 				C1A308F221DE5420008D37F1 /* iPhone XR.png in Resources */,
+				C16CE4C721EB482D00A070E5 /* iTunesArtwork@1x.png in Resources */,
 				C1449BE721B8CA6C0044A894 /* Assets.xcassets in Resources */,
 				C1449BE521B8CA690044A894 /* Main.storyboard in Resources */,
 				C166E0D521DB88CA0083EB32 /* GoogleService-Info.plist in Resources */,
@@ -292,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1449BE221B8CA690044A894 /* ViewController.swift in Sources */,
+				C14CC41A21EB214300FEB0DD /* WebViewController.swift in Sources */,
 				C13C6F3221E7AB4100044290 /* TableViewCell.swift in Sources */,
 				C1449BE021B8CA690044A894 /* AppDelegate.swift in Sources */,
 				C1A308EC21DDF0A2008D37F1 /* settingController.swift in Sources */,

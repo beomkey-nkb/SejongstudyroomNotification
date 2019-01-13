@@ -143,13 +143,13 @@ class createUser: UIViewController{
             
             for index in dic{
                 
-                if (index.value["studyNumber"] as! String == "\(numberStudy)"){
+                if (index.value["studyNumber"] as! String == "\(numberStudy)" || numberStudy == ""){
                     
                     print("가입 불가")
-                    let alertController = UIAlertController(title: "학번 중복 검사",message: "이미 가입된 학번입니다.", preferredStyle: UIAlertController.Style.alert)
+                    let alertController = UIAlertController(title: "학번 중복 검사",message: "이미 가입된 학번이거나 학번을 입력하지 않았습니다.", preferredStyle: UIAlertController.Style.alert)
                     
                     //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-                    let cancelButton = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
+                    let cancelButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
                     
                     alertController.addAction(cancelButton)
                     
@@ -165,7 +165,7 @@ class createUser: UIViewController{
             let alertController = UIAlertController(title: "학번 중복 검사",message: "가입 가능한 학번입니다.", preferredStyle: UIAlertController.Style.alert)
             
             //UIAlertActionStye.destructive 지정 글꼴 색상 변경
-            let cancelButton = UIAlertAction(title: "취소", style: UIAlertAction.Style.cancel, handler: nil)
+            let cancelButton = UIAlertAction(title: "확인", style: UIAlertAction.Style.cancel, handler: nil)
             
             alertController.addAction(cancelButton)
             
@@ -173,5 +173,7 @@ class createUser: UIViewController{
         })
     }
     
-    
+    @IBAction func backbutton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

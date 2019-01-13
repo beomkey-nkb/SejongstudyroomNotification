@@ -28,7 +28,7 @@ struct ReservedInformation{
     var state1: String
 }
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     var now = Date()
     let calendar = Calendar.current//달력- 현재 날짜를 받아온다.
@@ -73,6 +73,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var removeButton: UIButton!
     @IBOutlet weak var reserveView: ViewCustom!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     
     override var preferredStatusBarStyle:UIStatusBarStyle {
@@ -117,6 +118,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FIRDatabase = Database.database().reference()
+        
+        indicator.startAnimating()
+        
+        
         let components = self.calendar.dateComponents([.year, .month, .day], from: self.now)
         //현재 정보에서 원하는 정보만 추출(년도,달,일)
         self.year = components.year!
@@ -157,6 +162,7 @@ class ViewController: UIViewController {
         reserveView.isHidden = true
         
         postButton((Any).self)
+       
     }
     
     @IBAction func postButton(_ sender: Any) {
@@ -289,6 +295,8 @@ class ViewController: UIViewController {
                             {
                                 self.alertButton.isHidden = true
                             }
+                            
+                            self.indicator.stopAnimating()
                         }
                         else
                         {
@@ -321,7 +329,7 @@ class ViewController: UIViewController {
                             self.subView3.isHidden = true
                             self.subView4.isHidden = true
                             
-                            
+                            self.indicator.stopAnimating()
                         }
                         
                     } catch let error {
@@ -335,6 +343,7 @@ class ViewController: UIViewController {
                 }
             }
         })
+        
     }
 
 
